@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=>, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Survey</h1>
+    <input id="nameinput"/>
+    <h2>Question 1</h2>
+    <h3>Do you prefer that your pet be extremly loyal?</h3>
+    <select id="q1">
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+    </select>
+    <h2>Question 2</h2>
+    <h3>Do you like taking your animals outdoors with you?</h3>
+    <select id="q2">
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+    </select>
+    <h2>Question 3</h2>
+    <h3>Your pet should make no sounds.</h3>
+    <select id="q3">
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+    </select>
+    <h2>Question 4</h2>
+    <h3>You prefer low maintenance pets?</h3>
+    <select id="q4">
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+    </select>
+    <h2>Question 5</h2>
+    <h3>Do you prefer that your pet be extremly furry?</h3>
+    <select id="q5">
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+    </select>
+    <button id="findBtn">Find your pet</button>
+    
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+</body>
+</html>
+
+<script>
+$("#findBtn").on("click", function(){
+    // console.log("clicked")
+    var name = $("#nameinput").val()
+    var q1 = $("#q1").val()
+    var q2 = $("#q2").val()
+    var q3 = $("#q3").val()
+    var q4 = $("#q4").val()
+    var q5 = $("#q5").val()
+    var survey = {
+        name,
+        scores:[q1,q2,q3,q4,q5]
+    }
+    $.post("/api/pets",survey, function(data){
+        console.log(data)
+    })
+})
+</script>
