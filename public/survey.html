@@ -1,83 +1,198 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=>, initial-scale=1.0"> -->
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../assets/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto&display=swap" rel="stylesheet">
+
+    <title>Pet Finder!</title>
 </head>
+
 <body>
-    <h1>Survey</h1>
-    <input id="nameinput"/>
-    <h2>Question 1</h2>
-    <h3>Do you prefer that your pet be extremly loyal?</h3>
-    <select id="q1">
-        <option value=1>1</option>
-        <option value=2>2</option>
-        <option value=3>3</option>
-        <option value=4>4</option>
-        <option value=5>5</option>
-    </select>
-    <h2>Question 2</h2>
-    <h3>Do you like taking your animals outdoors with you?</h3>
-    <select id="q2">
-        <option value=1>1</option>
-        <option value=2>2</option>
-        <option value=3>3</option>
-        <option value=4>4</option>
-        <option value=5>5</option>
-    </select>
-    <h2>Question 3</h2>
-    <h3>Your pet should make no sounds.</h3>
-    <select id="q3">
-        <option value=1>1</option>
-        <option value=2>2</option>
-        <option value=3>3</option>
-        <option value=4>4</option>
-        <option value=5>5</option>
-    </select>
-    <h2>Question 4</h2>
-    <h3>You prefer low maintenance pets?</h3>
-    <select id="q4">
-        <option value=1>1</option>
-        <option value=2>2</option>
-        <option value=3>3</option>
-        <option value=4>4</option>
-        <option value=5>5</option>
-    </select>
-    <h2>Question 5</h2>
-    <h3>Do you prefer that your pet be extremly furry?</h3>
-    <select id="q5">
-        <option value=1>1</option>
-        <option value=2>2</option>
-        <option value=3>3</option>
-        <option value=4>4</option>
-        <option value=5>5</option>
-    </select>
-    <button id="findBtn">Find your pet</button>
-    
-    <script
-    src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
+    <div class="container content">
+        <h1>Survey</h1>
+        <form>
+            <div class="form-group">
+                <input id="nameinput" type="text" class="form-control" placeholder="Name (Required)">
+            </div>
+            <div class="form-group">
+                <input id="photo" type="text" class="form-control" placeholder="Link to Pet Photo (Required)">
+            </div>
+            <div class="form-group">
+                <h3><strong>Question 1</strong></h3>
+                <h4>Do you prefer that your pet be extremly loyal?</h4>
+                <select class="form-control" id="q1" style="width: 155px;">
+                    <option value=0>Select an option</option>
+                    <option value=1>1(Strongly Disagree)</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5(Strongly Agree)</option>
+                </select>
+                <h3><strong>Question 2</strong></h3>
+                <h4>Do you like taking your pets outdoors with you?</h4>
+                <select class="form-control" id="q2" style="width: 155px;">
+                    <option value=0>Select an option</option>
+                    <option value=1>1(Strongly Disagree)</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5(Strongly Agree)</option>
+                </select>
+                <h3><strong>Question 3</strong></h3>
+                <h4>Would you like an odd pet to show off?</h4>
+                <select class="form-control" id="q3" style="width: 155px;">
+                    <option value=0>Select an option</option>
+                    <option value=1>1(Strongly Disagree)</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5(Strongly Agree)</option>
+                </select>
+                <h3><strong>Question 4</strong></h3>
+                <h4>Do you prefer low maintenance pets?</h4>
+                <select class="form-control" id="q4" style="width: 155px;">
+                    <option value=0>Select an option</option>
+                    <option value=1>1(Strongly Disagree)</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5(Strongly Agree)</option>
+                </select>
+                <h3><strong>Question 5</strong></h3>
+                <h4>Are you seeking a pet to cuddle with?</h4>
+                <select class="form-control" id="q5" style="width: 155px;">
+                    <option value=0>Select an option</option>
+                    <option value=1>1(Strongly Disagree)</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5(Strongly Agree)</option>
+                </select>
+                <h3><strong>Question 6</strong></h3>
+                <h4>Do you prefer that your pet be extremly loyal?</h4>
+                <select class="form-control" id="q6" style="width: 155px;">
+                    <option value=0>Select an option</option>
+                    <option value=1>1(Strongly Disagree)</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5(Strongly Agree)</option>
+                </select>
+                <h3><strong>Question 7</strong></h3>
+                <h4>Are you looking for a life-long pet?</h4>
+                <select class="form-control" id="q7" style="width: 155px;">
+                    <option value=0>Select an option</option>
+                    <option value=1>1(Strongly Disagree)</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5(Strongly Agree)</option>
+                </select>
+                <h3><strong>Question 8</strong></h3>
+                <h4>Would you want to ride your pet?</h4>
+                <select class="form-control" id="q8" style="width: 155px;">
+                    <option value=0>Select an option</option>
+                    <option value=1>1(Strongly Disagree)</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5(Strongly Agree)</option>
+                </select>
+                <h3><strong>Question 9</strong></h3>
+                <h4>You prefer small pets over large?</h4>
+                <select class="form-control" id="q9" style="width: 155px;">
+                    <option value=0>Select an option</option>
+                    <option value=1>1(Strongly Disagree)</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5(Strongly Agree)</option>
+                </select>
+                <h3><strong>Question 10</strong></h3>
+                <h4>You require a cage for your pet?</h4>
+                <select class="form-control" id="q10" style="width: 155px;">
+                    <option value=0>Select an option</option>
+                    <option value=1>1(Strongly Disagree)</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5(Strongly Agree)</option>
+                </select>
+        </form>
+    </div>
+    </form>
+    <div class="text-center">
+        <button id="findBtn" type="submit" class="btn btn-success btn-lg">Find your pet!</button>
+    </div>
+
+    <!-- Modal after survey completion -->
+    <div id="bestPetFriendModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title">Your New Best Pet Friend</h1>
+                </div>
+                <div class="modal-body">
+                    <h2 id="bestPetFriend"></h2>
+                    <img id="bestPetFriendPhoto" src="#">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <a href="/api/pets">API Pet Friends List</a>
+            <span>|</span>
+            <a href="https://github.com/gwyscaver/friendfinder">GitHub Repo</a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 </body>
+
+</html>
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
 </html>
 
 <script>
-$("#findBtn").on("click", function(){
-    // console.log("clicked")
-    var name = $("#nameinput").val()
-    var q1 = $("#q1").val()
-    var q2 = $("#q2").val()
-    var q3 = $("#q3").val()
-    var q4 = $("#q4").val()
-    var q5 = $("#q5").val()
-    var survey = {
-        name,
-        scores:[q1,q2,q3,q4,q5]
-    }
-    $.post("/api/pets",survey, function(data){
-        console.log(data)
+    $("#findBtn").on("click", function () {
+        // console.log("clicked")
+        var name = $("#nameinput").val()
+        var q1 = $("#q1").val()
+        var q2 = $("#q2").val()
+        var q3 = $("#q3").val()
+        var q4 = $("#q4").val()
+        var q5 = $("#q5").val()
+        var q6 = $("#q6").val()
+        var q7 = $("#q7").val()
+        var q8 = $("#q8").val()
+        var q9 = $("#q9").val()
+        var q10 = $("#q10").val()
+
+        var survey = {
+            name,
+            scores: [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10]
+        }
+        $.post("/api/pets", survey, function (data) {
+            console.log(data)
+        })
     })
-})
 </script>

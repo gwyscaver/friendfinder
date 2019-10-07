@@ -8,12 +8,32 @@ var pets = [
         scores:[1,2,3,4,5]
     },
     {
-        name:"bunny",
+        name:"rabbit",
         scores:[3,2,1,4,5]
     },
     {
         name:"fish aquarium",
         scores:[3,4,5,2,1]
+    },
+    {
+        name:"parrot",
+        scores:[4,5,1,2,3]
+    },
+    {
+        name:"snake",
+        scores:[4,5,1,2,3]
+    },
+    {
+        name:"hamster, gerbil or guinea pig",
+        scores:[4,5,1,2,3]
+    },
+    {
+        name:"horse",
+        scores:[4,5,1,2,3]
+    },
+    {
+        name:"turtle",
+        scores:[4,5,1,2,3]
     },
     {
         name:"bird",
