@@ -29,6 +29,7 @@ module.exports = function (app) {
         var surveyScores = req.body.scores
         var petMatch = {
             name: "",
+            photo:"",
             score: 1000
         }
         for (let i = 0; i < pets.length; i++) {
@@ -42,6 +43,7 @@ module.exports = function (app) {
             }
             if (totalDiff < petMatch.score) {
                 petMatch.name = pets[i].name
+                petMatch.photo = pets[i].photo
                 petMatch.score = totalDiff
             }
         }

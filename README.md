@@ -5,7 +5,7 @@ Welcome to Best Pet Friend Finder! This is compatibility-based "BestPetFriendFin
 
 [GitHub Link](https://github.com/gwyscaver/friendfinder)
 
-![App Pic](assets/images/bestpetfriendfinder.jpg)
+![App Pic](assets/images/bestpetfriendfinder2.jpg)
 
 ## Live Link
 - https://gentle-peak-06753.herokuapp.com

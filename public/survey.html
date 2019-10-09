@@ -216,6 +216,7 @@
         var currentURL = window.location.origin;
         // Ajax call for receiving response after POST req
         $.post(currentURL + "/api/pets", survey, function(data) {
+            console.log(data)
             $("#bestPetFriend").text(data.name);
             $("#bestPetFriendPhoto").attr("src", data.photo);
             $("#bestPetFriendModal").modal("toggle");
