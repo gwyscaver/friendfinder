@@ -2,14 +2,24 @@
   "name": "data",
   "version": "1.0.0",
   "description": "",
-  "main": "friends.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gwyscaver/friendfinder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gwyscaver/friendfinder/issues"
+  },
+  "homepage": "https://github.com/gwyscaver/friendfinder#readme"
 }
