@@ -1,7 +1,7 @@
 var pets = [
     {
         name:"dog",
-        photo:"http://secureservercdn.net/198.71.233.179/lzw.726.myftpupload.com/wp-content/uploads/2017/03/Beautiful-Maltese-Dog-Photos-HD-Wallpapers-660x470.jpg",
+        photo:"https://cdn.pixabay.com/photo/2017/11/04/22/18/dog-2919014_640.jpg",
         scores:[
             5,
             5,
@@ -72,4 +72,4 @@ var pets = [
     // },
 
 ]
-module.exports=pets
+module.exports=pets;

@@ -23,7 +23,7 @@
                 <input id="nameinput" type="text" class="form-control" placeholder="Name (Required)">
             </div>
             <div class="form-group">
-                <input id="matchphoto" type="text" class="form-control" placeholder="Link to Pet Photo (Required)">
+                <input id="photo" type="text" class="form-control" placeholder="Link to Pet Photo (Required)">
             </div>
             <br>
             <div class="form-group">
@@ -177,8 +177,11 @@
 </html>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+</script> -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
@@ -191,10 +194,10 @@
 </html>
 
 <script>
-    $("#findBtn").on("click", function () {
+    $("#findBtn").on("click", function() {
         // console.log("clicked")
         var name = $("#nameinput").val().trim()
-        var photo = $("#matchphoto").val().trim()
+        var photo = $("#photo").val().trim()
         var q1 = $("#q1").val()
         var q2 = $("#q2").val()
         var q3 = $("#q3").val()
@@ -210,11 +213,12 @@
             name,
             scores: [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10]
         }
+        var currentURL = window.location.origin;
         // Ajax call for receiving response after POST req
-        $.post("/api/pets", survey, function (data) {
-            $('#bestPetFriend').text(data.name);
-            $('#bestPetFriendPhoto').attr('src', data.photo);
-            $("#bestPetFriendModal").modal('toggle');
+        $.post(currentURL + "/api/pets", survey, function(data) {
+            $("#bestPetFriend").text(data.name);
+            $("#bestPetFriendPhoto").attr("src", data.photo);
+            $("#bestPetFriendModal").modal("toggle");
         });
 
     });
