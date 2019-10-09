@@ -1,4 +1,4 @@
-# Best Friend Pet Finder
+## Best Pet Friend Finder
 
 Welcome to Bamazon! This is an Amazon-like storefront built with MySQL and Node.js. 
 
