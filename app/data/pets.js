@@ -1,14 +1,34 @@
 var pets = [
     {
         name:"dog",
-        photo:"../assets/images/dog.jpg",
-        scores:[5,3,1,5,5,5,5,5,3,1]
+        photo:"http://secureservercdn.net/198.71.233.179/lzw.726.myftpupload.com/wp-content/uploads/2017/03/Beautiful-Maltese-Dog-Photos-HD-Wallpapers-660x470.jpg",
+        scores:[
+            5,
+            5,
+            2,
+            3,
+            4,
+            5,
+            2,
+            1,
+            1,
+            5]
     },
 
     {
         name:"cat",
-        photo:"../assets/images/cat.jpg",
-        scores:[1,2,3,4,5]
+        photo:"https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg",
+        scores:[
+            3,
+            1,
+            2,
+            1,
+            5,
+            1,
+            4,
+            4,
+            5,
+            1]
     },
     // {
     //     name:"rabbit",
